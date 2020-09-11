@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Search Album by artist{% endblock %}
+
+{% block body %}
+    <h1>Search Album by artist</h1>
+
+    <form action="{{ path('album_search') }}" method="get">
+        <div class="form-group">
+            <input name="q"
+                   class="form-control search-field"
+                   placeholder="search by artist"
+                   autocomplete="off"
+                   value="{{ query }}"
+                   autofocus
+            >
+        </div>
+    </form>
+{#    {{ include('album/_form.html.twig') }}#}
+
+    <a href="{{ path('album_index') }}">back to list</a>
+{% endblock %}

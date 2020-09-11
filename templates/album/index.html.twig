@@ -5,6 +5,8 @@
 {% block body %}
     <h1>Album index</h1>
 
+
+    <input>
     <table class="table">
         <thead>
             <tr>
@@ -36,4 +38,6 @@
     </table>
 
     <a href="{{ path('album_new') }}">Create new</a>
+{#    <a href="{{ path('search/search_by_artist') }}">search</a>#}
+
 {% endblock %}
